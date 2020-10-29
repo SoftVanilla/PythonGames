@@ -1,10 +1,7 @@
 import random
 
-d = {str(i):0 for i in range(10)}
 l = random.sample(range(10), 4)
-
-for i, v in enumerate(l):
-    d[str(v)] = i+1
+print(l)
 
 cnt = 10
 
@@ -29,9 +26,9 @@ while cnt != 0:
     strike, ball = 0, 0
 
     for i, c in enumerate(guess):
-        if i+1 == d[c]:
+        if l[i] == int(c):
             strike += 1
-        elif d[c] != 0:
+        elif int(c) in l:
             ball += 1
 
     print(strike, 'strike', ball, 'ball')
