@@ -1,7 +1,6 @@
 import random
 
 l = random.sample(range(10), 4)
-print(l)
 
 cnt = 10
 
